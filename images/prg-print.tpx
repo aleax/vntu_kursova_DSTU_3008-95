@@ -1,0 +1,45 @@
+%<TpX v="5" ArrowsSize="0.7" StarsSize="1" DefaultFontHeight="5" DefaultSymbolSize="30" ApproximationPrecision="0.01" PicScale="1" Border="2" BitmapRes="20000" HatchingStep="2" DottedSize="0.5" DashSize="1" LineWidth="0.3" TeXFigurePlacement="ht" FontSizeInTeX="0">
+%  <line x1="-19.9012" y1="0.0458387" x2="19.8685" y2="0.0458387"/>
+%  <line x1="20.0051" y1="-10.0674" x2="-19.9012" y2="-10.0674"/>
+%  <arc x="-20.0379" y="0.0458387" d="0" a1="0" a2="0"/>
+%  <arc x="-19.9753" y="-5.03641" d="9.90131" a1="1.55814" a2="4.72518"/>
+%  <arc x="19.7396" y="-5.04895" d="10.1705" a1="4.77404" a2="7.81868"/>
+%  <text x="-0.0489375" y="-6.16432" t="Початок" h="5" halign="c"/>
+%  <line x1="-0.0317109" y1="-10.1593" x2="-0.242312" y2="-15.4815"/>
+%  <text x="0.800297" y="-23.0499" t="$print(x,y,E)$" tex="$print(x,y,E)$" h="5" halign="c"/>
+%  <line x1="-0.0317075" y1="-25.6342" x2="-0.0227911" y2="-29.876"/>
+%  <rect x="-23.6789" y="-25.5205" w="0" h="0"/>
+%  <line x1="-0.215651" y1="-40.0767" x2="-0.215651" y2="-45.2169"/>
+%  <arc x="-19.9753" y="-50.56" d="9.90148" a1="1.55814" a2="4.72518"/>
+%  <line x1="-19.9012" y1="-45.4779" x2="19.8685" y2="-45.4779"/>
+%  <arc x="19.7396" y="-50.572" d="10.1705" a1="4.77404" a2="7.81868"/>
+%  <line x1="20.0051" y1="-55.591" x2="-19.9012" y2="-55.591"/>
+%  <text x="-0.0351449" y="-51.988" t="Кінець" h="5" halign="c"/>
+%  <rect x="-25.1241" y="-25.6549" w="50.0685" h="10.1023"/>
+%  <line x1="-23.0369" y1="-15.4024" x2="-22.9132" y2="-25.7914"/>
+%  <line x1="21.9822" y1="-15.4024" x2="21.9822" y2="-25.544"/>
+%  <text x="0.0476731" y="-36.7247" t="$x,y,E$" tex="$x,y,E$" h="5" halign="c"/>
+%  <polygon>-20.1998,-29.8569 24.8481,-29.8569 19.8578,-40.2422 -25.325,-40.1073</polygon>
+%</TpX>
+\begin{figure}[ht]
+\centering
+\ifpdf
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(153.83, 169.21)(0,0)
+  \put(0,0){\includegraphics{prg-print.pdf}}
+  \put(77.32,145.94){\makebox[0pt]{Початок}}
+  \put(79.73,98.07){\makebox[0pt]{$print(x,y,E)$}}
+  \put(77.36,16.04){\makebox[0pt]{Кінець}}
+  \put(77.59,59.31){\makebox[0pt]{$x,y,E$}}
+  \end{picture}%
+\else
+  \setlength{\unitlength}{1bp}%
+  \begin{picture}(153.83, 169.21)(0,0)
+  \put(0,0){\includegraphics{prg-print}}
+  \put(77.32,145.94){\makebox[0pt]{Початок}}
+  \put(79.73,98.07){\makebox[0pt]{$print(x,y,E)$}}
+  \put(77.36,16.04){\makebox[0pt]{Кінець}}
+  \put(77.59,59.31){\makebox[0pt]{$x,y,E$}}
+  \end{picture}%
+\fi
+\end{figure}
