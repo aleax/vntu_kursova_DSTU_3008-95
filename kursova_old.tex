@@ -77,7 +77,7 @@
 
 % Максимальный уровень вложенности секций, помещаемых в Содержание (по умолчанию вносятся \part, \chapter и \section).
 % tocdepth
-\setcounter{tocdepth}{3}    
+\setcounter{tocdepth}{3}
 
 % Максимальный уровень вложенности нумеруемых секций (по умолчанию нумеруются \part,\chapter, \section и \subsection).
 % secnumdepth
@@ -153,7 +153,7 @@
     \begingroup
       \parindent \z@ \rightskip \@pnumwidth
       \parfillskip -\@pnumwidth
-      \leavevmode 
+      \leavevmode
       \advance\leftskip\@tempdima
       \hskip -\leftskip
       #1\nobreak \leaders\hbox to .7em{\hss.\hss}\hfil\nobreak\hb@xt@\@pnumwidth{\hss #2}\par
@@ -166,8 +166,8 @@
 % Рисунки и таблицы
 
 % переопределение названия, разделительного знака и отступов
-\usepackage{caption} 
-\DeclareCaptionLabelSeparator{tire}{~--- } 
+\usepackage{caption}
+\DeclareCaptionLabelSeparator{tire}{~--- }
 \captionsetup{justification=centering,labelsep=tire,aboveskip=00pt,belowskip=14pt}
 
 % вариант по ``суворому челябинскому программисту''
@@ -223,8 +223,8 @@
 }
 
 % Определение Додатків так, как нам надо ))
-%\newcommand\myappendix[1]{ 
-%    \refstepcounter{section} 
+%\newcommand\myappendix[1]{
+%    \refstepcounter{section}
 %	\section*{
 %    \begin{center}
 %      \thispagestyle{empty}
@@ -235,16 +235,17 @@
 %      \vspace*{\fill}
 %    \clearpage
 %    \end{center}
-%    } 
+%    }
 %}
 
-\newcommand\myappendix[1]{ 
-    \refstepcounter{section} 
-	\section*{
+\newcommand\myappendix[1]{
+    \refstepcounter{section}
     \begin{center}
-        Додаток~\thesection{}. #1 \addcontentsline{toc}{section}{Додаток~\thesection{}.~#1}
+	\section*{
+        Додаток~\thesection{}. #1
+\addcontentsline{toc}{section}{Додаток~\thesection{}.~#1}
     \end{center}
-    } 
+    }
 }
 
 \makeatother

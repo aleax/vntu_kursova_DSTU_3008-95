@@ -124,7 +124,7 @@
 \renewcommand\section{\@startsection {section}{1}{\parindent}%
                                    {5.5ex \@plus -1ex \@minus -.2ex}%
                                    {2.3ex \@plus.2ex}%
-                                   {\normalfont\bfseries\protect\centering\protect\MakeUppercase}}
+						{\normalfont\bfseries\centering\protect\MakeUppercase}}
                                    %{\normalfont}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\parindent}%
                                      {5.25ex\@plus -1ex \@minus -.2ex}%
@@ -167,3 +167,20 @@
 \addto\captionsukrainian{\renewcommand\tablename{Таблиця}}
 
 %TODO: Додатки
+\renewcommand\appendix{\par
+  \setcounter{section}{0}%
+  \setcounter{subsection}{0}%
+  \gdef\thesection{\@Asbuk\c@section}
+
+\renewcommand\section{\@startsection {section}{1}{\parindent}%
+                                   {5.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex\@plus.2ex}%
+								  {\normalfont\normalsize\centering}}
+
+}
+
+\newcommand\myappendix[1]{
+  \refstepcounter{section}
+	\section*{\centering\appendixname~\thesection{}\\(обов'язковий)\\#1}
+	\addcontentsline{toc}{section}{\appendixname~\thesection{}.~#1}
+}
