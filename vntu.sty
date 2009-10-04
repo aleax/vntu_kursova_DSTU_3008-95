@@ -179,8 +179,14 @@
 
 }
 
-\newcommand\myappendix[1]{
+\newcommand{\mandatory}{обов'язковий}
+\newcommand{\informational}{довідковий}
+
+\newcommand\myappendix[2]{
   \refstepcounter{section}
-	\section*{\centering\appendixname~\thesection{}\\(обов'язковий)\\#1}
+	\section*{\centering\appendixname~\thesection{}
+	\\(#2) %TODO Проверка на `пустость` параметра типа приложения
+	%\ifx#2\@empty\else\\(#2)\fi\\
+	\\#1}
 	\addcontentsline{toc}{section}{\appendixname~\thesection{}.~#1}
 }
