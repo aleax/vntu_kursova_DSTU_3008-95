@@ -188,10 +188,10 @@ hyperref=auto]{biblatex}
 \newcommand{\mandatory}{обов'язковий}
 \newcommand{\informational}{довідковий}
 
-\newcommand\myappendix[1]{
+\newcommand\myappendix[2]{
   \refstepcounter{section}
 	\section*{\centering\appendixname~\thesection{}
-	%\\(#2) %TODO Проверка на `пустость` параметра типа приложения
+	\\(#2) %TODO Проверка на `пустость` параметра типа приложения
 	\\#1}
 	\addcontentsline{toc}{section}{\appendixname~\thesection{}.~#1}
 }
