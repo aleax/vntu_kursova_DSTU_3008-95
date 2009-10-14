@@ -118,6 +118,12 @@
 \RequirePackage[sorting=none,
 hyperref=auto]{biblatex}
 
+\DefineBibliographyStrings{english}{
+    bibliography = {{Bibliography}{Bibliography}}
+    references   = {{Перелік посилань}{Перелік посилань}},
+}
+
+
 %\bibliographystyle{unsrt,gost780u}
 %\bibliographystyle{unsrt}
 %\bibliographystyle{gost780u}

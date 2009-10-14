@@ -1,0 +1,405 @@
+% $Id: english.lbx,v 0.8e 2009/07/04 15:02:31 lehman beta $
+
+\ProvidesFile{ukrainian.lbx}
+[\abx@lbxid $Id: ukrainian.lbx,v 0.8e 2009/07/04 15:02:31 lehman beta $]
+
+% STATUS OF THIS FILE
+% * complete
+% * peer review pending (note that these are the UK translations)
+% * translations should be ok but abbreviations need review
+
+\DeclareBibliographyExtras{%
+  \let\bibrangedash=\textendash
+  \def\finalandcomma{\addcomma}%
+  \def\mkbibordinal#1{%
+    \begingroup
+    \@tempcnta0#1\relax\number\@tempcnta
+    \@whilenum\@tempcnta>100\do{\advance\@tempcnta-100\relax}%
+    \ifnum\@tempcnta>20
+      \@whilenum\@tempcnta>9\do{\advance\@tempcnta-10\relax}%
+    \fi
+    \ifcase\@tempcnta th\or st\or nd\or rd\else th\fi
+    \endgroup}%
+  \def\bibdatelong{%
+    \mkbibmonth{\thefield{month}}\nobreakspace
+    \number\numexpr0\thefield{day}\relax,\space
+    \thefield{year}}%
+  \def\bibdateshort{%
+    \thefield{month}/\thefield{day}/\thefield{year}}%
+  \def\biburldatelong{%
+    \mkbibmonth{\thefield{urlmonth}}\nobreakspace
+    \number\numexpr0\thefield{urlday}\relax,\space
+    \thefield{urlyear}}%
+  \def\biburldateshort{%
+    \thefield{urlmonth}/\thefield{urlday}/\thefield{urlyear}}%
+}
+
+\DeclareBibliographyStrings{%
+  bibliography     = {{Bibliography}{Bibliography}},
+  references       = {{References}{References}},
+  shorthands       = {{List of Abbreviations}{Abbreviations}},
+  editor           = {{\lbx@typeeditor}{\lbx@typeeditor}},
+  editors          = {{\lbx@typeeditors}{\lbx@typeeditors}},
+  typeeditor       = {{editor}{ed\adddot}},
+  typeeditors      = {{editors}{eds\adddot}},
+  typecompiler     = {{compiler}{comp\adddot}},
+  typecompilers    = {{compilers}{comp\adddot}},
+  translator       = {{translator}{trans\adddot}},
+  translators      = {{translators}{trans\adddot}},
+  redactor         = {{redactor}{red\adddot}},
+  redactors        = {{redactors}{red\adddot}},
+  commentator      = {{commentator}{comm\adddot}},
+  commentators     = {{commentators}{comm\adddot}},
+  annotator        = {{annotator}{annot\adddot}},
+  annotators       = {{annotators}{annot\adddot}},
+  commentary       = {{commentary}{comm\adddot}},
+  annotations      = {{annotations}{annot\adddot}},
+  introduction     = {{introduction}{intro\adddot}},
+  foreword         = {{foreword}{forew\adddot}},
+  afterword        = {{afterword}{afterw\adddot}},
+  editortr         = {{\lbx@typeeditor\ and translator}%
+                      {\lbx@typeeditor\addabbrvspace and trans\adddot}},
+  editorstr        = {{\lbx@typeeditors\ and translators}%
+                      {\lbx@typeeditors\addabbrvspace and trans\adddot}},
+  editorco         = {{\lbx@typeeditor\ and commentator}%
+                      {\lbx@typeeditor\addabbrvspace and comm\adddot}},
+  editorsco        = {{\lbx@typeeditors\ and commentators}%
+                      {\lbx@typeeditors\addabbrvspace and comm\adddot}},
+  editoran         = {{\lbx@typeeditor\ and annotator}%
+                      {\lbx@typeeditor\addabbrvspace and annot\adddot}},
+  editorsan        = {{\lbx@typeeditors\ and annotators}%
+                      {\lbx@typeeditors\addabbrvspace and annot\adddot}},
+  editorin         = {{\lbx@typeeditor and introduction}%
+                      {\lbx@typeeditor\addabbrvspace and introd\adddot}},
+  editorsin        = {{\lbx@typeeditors and introduction}%
+                      {\lbx@typeeditors\addabbrvspace and introd\adddot}},
+  editorfo         = {{\lbx@typeeditor and foreword}%
+                      {\lbx@typeeditor\addabbrvspace and forew\adddot}},
+  editorsfo        = {{\lbx@typeeditors and foreword}%
+                      {\lbx@typeeditors\addabbrvspace and forew\adddot}},
+  editoraf         = {{\lbx@typeeditor and afterword}%
+                      {\lbx@typeeditor\addabbrvspace and afterw\adddot}},
+  editorsaf        = {{\lbx@typeeditors and afterword}%
+                      {\lbx@typeeditors\addabbrvspace and afterw\adddot}},
+  editortrco       = {{\lbx@typeeditor, translator\finalandcomma\ and commentator}%
+                      {\lbx@typeeditor,\addabbrvspace trans\adddot\finalandcomma\ and comm\adddot}},
+  editorstrco      = {{\lbx@typeeditors, translators\finalandcomma\ and commentators}%
+                      {\lbx@typeeditors,\addabbrvspace trans\adddot\finalandcomma\ and comm\adddot}},
+  editortran       = {{\lbx@typeeditor, translator\finalandcomma\ and annotator}%
+                      {\lbx@typeeditor,\addabbrvspace trans\adddot\finalandcomma\ and annot\adddot}},
+  editorstran      = {{\lbx@typeeditors, translators\finalandcomma\ and annotators}%
+                      {\lbx@typeeditors,\addabbrvspace trans\adddot\finalandcomma\ and annot\adddot}},
+  editortrin       = {{\lbx@typeeditor, translator\finalandcomma\ and introduction}%
+                      {\lbx@typeeditor,\addabbrvspace trans\adddot\finalandcomma\ and introd\adddot}},
+  editorstrin      = {{\lbx@typeeditors, translators\finalandcomma\ and introduction}%
+                      {\lbx@typeeditors,\addabbrvspace trans\adddot\finalandcomma\ and introd\adddot}},
+  editortrfo       = {{\lbx@typeeditor, translator\finalandcomma\ and foreword}%
+                      {\lbx@typeeditor,\addabbrvspace trans\adddot\finalandcomma\ and forew\adddot}},
+  editorstrfo      = {{\lbx@typeeditors, translators\finalandcomma\ and foreword}%
+                      {\lbx@typeeditors,\addabbrvspace trans\adddot\finalandcomma\ and forew\adddot}},
+  editortraf       = {{\lbx@typeeditor, translator\finalandcomma\ and afterword}%
+                      {\lbx@typeeditor,\addabbrvspace trans\adddot\finalandcomma\ and afterw\adddot}},
+  editorstraf      = {{\lbx@typeeditors, translators\finalandcomma\ and afterword}%
+                      {\lbx@typeeditors,\addabbrvspace trans\adddot\finalandcomma\ and afterw\adddot}},
+  editorcoin       = {{\lbx@typeeditor, commentator\finalandcomma\ and introduction}%
+                      {\lbx@typeeditor,\addabbrvspace comm\adddot\finalandcomma\ and introd\adddot}},
+  editorscoin      = {{\lbx@typeeditors, commentators\finalandcomma\ and introduction}%
+                      {\lbx@typeeditors,\addabbrvspace comm\adddot\finalandcomma\ and introd\adddot}},
+  editorcofo       = {{\lbx@typeeditor, commentator\finalandcomma\ and foreword}%
+                      {\lbx@typeeditor,\addabbrvspace comm\adddot\finalandcomma\ and forew\adddot}},
+  editorscofo      = {{\lbx@typeeditors, commentators\finalandcomma\ and foreword}%
+                      {\lbx@typeeditors,\addabbrvspace comm\adddot\finalandcomma\ and forew\adddot}},
+  editorcoaf       = {{\lbx@typeeditor, commentator\finalandcomma\ and afterword}%
+                      {\lbx@typeeditor,\addabbrvspace comm\adddot\finalandcomma\ and afterw\adddot}},
+  editorscoaf      = {{\lbx@typeeditors, commentators\finalandcomma\ and afterword}%
+                      {\lbx@typeeditors,\addabbrvspace comm\adddot\finalandcomma\ and afterw\adddot}},
+  editoranin       = {{\lbx@typeeditor, annotator\finalandcomma\ and introduction}%
+                      {\lbx@typeeditor,\addabbrvspace annot\adddot\finalandcomma\ and introd\adddot}},
+  editorsanin      = {{\lbx@typeeditors, annotators\finalandcomma\ and introduction}%
+                      {\lbx@typeeditors,\addabbrvspace annot\adddot\finalandcomma\ and introd\adddot}},
+  editoranfo       = {{\lbx@typeeditor, annotator\finalandcomma\ and foreword}%
+                      {\lbx@typeeditor,\addabbrvspace annot\adddot\finalandcomma\ and forew\adddot}},
+  editorsanfo      = {{\lbx@typeeditors, annotators\finalandcomma\ and foreword}%
+                      {\lbx@typeeditors,\addabbrvspace annot\adddot\finalandcomma\ and forew\adddot}},
+  editoranaf       = {{\lbx@typeeditor, annotator\finalandcomma\ and afterword}%
+                      {\lbx@typeeditor,\addabbrvspace annot\adddot\finalandcomma\ and afterw\adddot}},
+  editorsanaf      = {{\lbx@typeeditors, annotators\finalandcomma\ and afterword}%
+                      {\lbx@typeeditors,\addabbrvspace annot\adddot\finalandcomma\ and afterw\adddot}},
+  editortrcoin     = {{\lbx@typeeditor, translator, commentator\finalandcomma\ and introduction}%
+                      {\lbx@typeeditor,\addabbrvspace trans., comm\adddot\finalandcomma\ and introd\adddot}},
+  editorstrcoin    = {{\lbx@typeeditors, translators, commentators\finalandcomma\ and introduction}%
+                      {\lbx@typeeditors,\addabbrvspace trans., comm\adddot\finalandcomma\ and introd\adddot}},
+  editortrcofo     = {{\lbx@typeeditor, translator, commentator\finalandcomma\ and foreword}%
+                      {\lbx@typeeditor,\addabbrvspace trans., comm\adddot\finalandcomma\ and forew\adddot}},
+  editorstrcofo    = {{\lbx@typeeditors, translators, commentators\finalandcomma\ and foreword}%
+                      {\lbx@typeeditors,\addabbrvspace trans., comm\adddot\finalandcomma\ and forew\adddot}},
+  editortrcoaf     = {{\lbx@typeeditor, translator, commentator\finalandcomma\ and afterword}%
+                      {\lbx@typeeditor,\addabbrvspace trans., comm\adddot\finalandcomma\ and afterw\adddot}},
+  editorstrcoaf    = {{\lbx@typeeditors, translators, commentators\finalandcomma\ and afterword}%
+                      {\lbx@typeeditors,\addabbrvspace trans., comm\adddot\finalandcomma\ and afterw\adddot}},
+  editortranin     = {{\lbx@typeeditor, translator, annotator\finalandcomma\ and introduction}%
+                      {\lbx@typeeditor,\addabbrvspace trans., annot\adddot\finalandcomma\ and introd\adddot}},
+  editorstranin    = {{\lbx@typeeditors, translators, annotators\finalandcomma\ and introduction}%
+                      {\lbx@typeeditors,\addabbrvspace trans., annot\adddot\finalandcomma\ and introd\adddot}},
+  editortranfo     = {{\lbx@typeeditor, translator, annotator\finalandcomma\ and foreword}%
+                      {\lbx@typeeditor,\addabbrvspace trans., annot\adddot\finalandcomma\ and forew\adddot}},
+  editorstranfo    = {{\lbx@typeeditors, translators, annotators\finalandcomma\ and foreword}%
+                      {\lbx@typeeditors,\addabbrvspace trans., annot\adddot\finalandcomma\ and forew\adddot}},
+  editortranaf     = {{\lbx@typeeditor, translator, annotator\finalandcomma\ and afterword}%
+                      {\lbx@typeeditor,\addabbrvspace trans., annot\adddot\finalandcomma\ and afterw\adddot}},
+  editorstranaf    = {{\lbx@typeeditors, translators, annotators\finalandcomma\ and afterword}%
+                      {\lbx@typeeditors,\addabbrvspace trans., annot\adddot\finalandcomma\ and afterw\adddot}},
+  translatorco     = {{translator and commentator}%
+                      {trans\adddot\ and comm\adddot}},
+  translatorsco    = {{translators and commentators}%
+                      {trans\adddot\ and comm\adddot}},
+  translatoran     = {{translator and annotator}%
+                      {trans\adddot\ and annot\adddot}},
+  translatorsan    = {{translators and annotators}%
+                      {trans\adddot\ and annot\adddot}},
+  translatorin     = {{translation and introduction}%
+                      {trans\adddot\ and introd\adddot}},
+  translatorsin    = {{translation and introduction}%
+                      {trans\adddot\ and introd\adddot}},
+  translatorfo     = {{translation and foreword}%
+                      {trans\adddot\ and forew\adddot}},
+  translatorsfo    = {{translation and foreword}%
+                      {trans\adddot\ and forew\adddot}},
+  translatoraf     = {{translation and afterword}%
+                      {trans\adddot\ and afterw\adddot}},
+  translatorsaf    = {{translation and afterword}%
+                      {trans\adddot\ and afterw\adddot}},
+  translatorcoin   = {{translation, commentary\finalandcomma\ and introduction}%
+                      {trans., comm\adddot\finalandcomma\ and introd\adddot}},
+  translatorscoin  = {{translation, commentary\finalandcomma\ and introduction}%
+                      {trans., comm\adddot\finalandcomma\ and introd\adddot}},
+  translatorcofo   = {{translation, commentary\finalandcomma\ and foreword}%
+                      {trans., comm\adddot\finalandcomma\ and forew\adddot}},
+  translatorscofo  = {{translation, commentary\finalandcomma\ and foreword}%
+                      {trans., comm\adddot\finalandcomma\ and forew\adddot}},
+  translatorcoaf   = {{translation, commentary\finalandcomma\ and afterword}%
+                      {trans., comm\adddot\finalandcomma\ and afterw\adddot}},
+  translatorscoaf  = {{translation, commentary\finalandcomma\ and afterword}%
+                      {trans., comm\adddot\finalandcomma\ and afterw\adddot}},
+  translatoranin   = {{translation, annotations\finalandcomma\ and introduction}%
+                      {trans., annot\adddot\finalandcomma\ and introd\adddot}},
+  translatorsanin  = {{translation, annotations\finalandcomma\ and introduction}%
+                      {trans., annot\adddot\finalandcomma\ and introd\adddot}},
+  translatoranfo   = {{translation, annotations\finalandcomma\ and foreword}%
+                      {trans., annot\adddot\finalandcomma\ and forew\adddot}},
+  translatorsanfo  = {{translation, annotations\finalandcomma\ and foreword}%
+                      {trans., annot\adddot\finalandcomma\ and forew\adddot}},
+  translatoranaf   = {{translation, annotations\finalandcomma\ and afterword}%
+                      {trans., annot\adddot\finalandcomma\ and afterw\adddot}},
+  translatorsanaf  = {{translation, annotations\finalandcomma\ and afterword}%
+                      {trans., annot\adddot\finalandcomma\ and afterw\adddot}},
+  byauthor         = {{\lbx@bytypeauthor}{\lbx@bytypeauthor}},
+  bytypeauthor     = {{by}{by}},
+  byeditor         = {{\lbx@bytypeeditor\ by}{\lbx@bytypeeditor\addabbrvspace by}},
+  bytypeeditor     = {{edited}{ed\adddot}},
+  bytypecompiler   = {{compiled}{comp\adddot}},
+  bytranslator     = {{translated \lbx@fromlang\ by}{trans\adddot\ \lbx@fromlang\ by}},
+  byredactor       = {{redacted by}{red\adddot\ by}},
+  bycommentator    = {{commented by}{comm\adddot\ by}},
+  byannotator      = {{annotated by}{annot\adddot\ by}},
+  withcommentator  = {{with a commentary by}{with a comment\adddot\ by}},
+  withannotator    = {{with annotations by}{with annots\adddot\ by}},
+  withintroduction = {{with an introduction by}{with an intro\adddot\ by}},
+  withforeword     = {{with a foreword by}{with a forew\adddot\ by}},
+  withafterword    = {{with an afterword by}{with an afterw\adddot\ by}},
+  bytypeeditor     = {{edited}{ed\adddot}},
+  bytypecompiler   = {{compiled}{comp\adddot}},
+  byeditortr       = {{\lbx@bytypeeditor\ and translated \lbx@fromlang\ by}%
+                      {\lbx@bytypeeditor\addabbrvspace and trans\adddot\ \lbx@fromlang\ by}},
+  byeditorco       = {{\lbx@bytypeeditor\ and commented by}%
+                      {\lbx@bytypeeditor\addabbrvspace and comm\adddot\ by}},
+  byeditoran       = {{\lbx@bytypeeditor\ and annotated by}%
+                      {\lbx@bytypeeditor\addabbrvspace and annot\adddot\ by}},
+  byeditorin       = {{\lbx@bytypeeditor, with an introduction, by}%
+                      {\lbx@bytypeeditor,\addabbrvspace with an introd., by}},
+  byeditorfo       = {{\lbx@bytypeeditor, with a foreword, by}%
+                      {\lbx@bytypeeditor,\addabbrvspace with a forew., by}},
+  byeditoraf       = {{\lbx@bytypeeditor, with an afterword, by}%
+                      {\lbx@bytypeeditor,\addabbrvspace with an afterw., by}},
+  byeditortrco     = {{\lbx@bytypeeditor, translated \lbx@fromlang\finalandcomma\ and commented by}%
+                      {\lbx@bytypeeditor,\addabbrvspace trans\adddot\ \lbx@fromlang\finalandcomma\ and comm\adddot\ by}},
+  byeditortran     = {{\lbx@bytypeeditor, translated \lbx@fromlang\finalandcomma\ and annotated by}%
+                      {\lbx@bytypeeditor,\addabbrvspace trans\adddot\ \lbx@fromlang\finalandcomma\ and annot\adddot\ by}},
+  byeditortrin     = {{\lbx@bytypeeditor\ and translated \lbx@fromlang, with an introduction, by}%
+                      {\lbx@bytypeeditor\addabbrvspace and trans\adddot\ \lbx@fromlang, with an introd., by}},
+  byeditortrfo     = {{\lbx@bytypeeditor\ and translated \lbx@fromlang, with a foreword, by}%
+                      {\lbx@bytypeeditor\addabbrvspace and trans\adddot\ \lbx@fromlang, with a forew., by}},
+  byeditortraf     = {{\lbx@bytypeeditor\ and translated \lbx@fromlang, with an afterword, by}%
+                      {\lbx@bytypeeditor\addabbrvspace and trans\adddot\ \lbx@fromlang, with an afterw., by}},
+  byeditorcoin     = {{\lbx@bytypeeditor\ and commented, with an introduction, by}%
+                      {\lbx@bytypeeditor\addabbrvspace and comm., with an introd., by}},
+  byeditorcofo     = {{\lbx@bytypeeditor\ and commented, with a foreword, by}%
+                      {\lbx@bytypeeditor\addabbrvspace and comm., with a forew., by}},
+  byeditorcoaf     = {{\lbx@bytypeeditor\ and commented, with an afterword, by}%
+                      {\lbx@bytypeeditor\addabbrvspace and comm., with an afterw., by}},
+  byeditoranin     = {{\lbx@bytypeeditor\ and annotated, with an introduction, by}%
+                      {\lbx@bytypeeditor\addabbrvspace and annot., with an introd., by}},
+  byeditoranfo     = {{\lbx@bytypeeditor\ and annotated, with a foreword, by}%
+                      {\lbx@bytypeeditor\addabbrvspace and annot., with a forew., by}},
+  byeditoranaf     = {{\lbx@bytypeeditor\ and annotated, with an afterword, by}%
+                      {\lbx@bytypeeditor\addabbrvspace and annot., with an afterw., by}},
+  byeditortrcoin   = {{\lbx@bytypeeditor, translated \lbx@fromlang\finalandcomma\ and commented, with an introduction, by}%
+                      {\lbx@bytypeeditor,\addabbrvspace trans\adddot\ \lbx@fromlang\finalandcomma\ and comm., with an introd., by}},
+  byeditortrcofo   = {{\lbx@bytypeeditor, translated \lbx@fromlang\finalandcomma\ and commented, with a foreword, by}%
+                      {\lbx@bytypeeditor,\addabbrvspace trans\adddot\ \lbx@fromlang\finalandcomma\ and comm., with a forew., by}},
+  byeditortrcoaf   = {{\lbx@bytypeeditor, translated \lbx@fromlang\finalandcomma\ and commented, with an afterword, by}%
+                      {\lbx@bytypeeditor,\addabbrvspace trans\adddot\ \lbx@fromlang\finalandcomma\ and comm., with an afterw., by}},
+  byeditortranin   = {{\lbx@bytypeeditor, translated \lbx@fromlang\finalandcomma\ and annotated, with an introduction, by}%
+                      {\lbx@bytypeeditor,\addabbrvspace trans\adddot\ \lbx@fromlang\finalandcomma\ and annot, with an introd., by}},
+  byeditortranfo   = {{\lbx@bytypeeditor, translated \lbx@fromlang\finalandcomma\ and annotated, with a foreword, by}%
+                      {\lbx@bytypeeditor,\addabbrvspace trans\adddot\ \lbx@fromlang\finalandcomma\ and annot, with a forew., by}},
+  byeditortranaf   = {{\lbx@bytypeeditor, translated \lbx@fromlang\finalandcomma\ and annotated, with an afterword, by}%
+                      {\lbx@bytypeeditor,\addabbrvspace trans\adddot\ \lbx@fromlang\finalandcomma\ and annot, with an afterw., by}},
+  bytranslatorco   = {{translated \lbx@fromlang\ and commented by}%
+                      {trans\adddot\ \lbx@fromlang\ and comm\adddot\ by}},
+  bytranslatoran   = {{translated \lbx@fromlang\ and annotated by}%
+                      {trans\adddot\ \lbx@fromlang\ and annot\adddot\ by}},
+  bytranslatorin   = {{translated \lbx@fromlang, with an introduction, by}%
+                      {trans\adddot\ \lbx@fromlang, with an introd., by}},
+  bytranslatorfo   = {{translated \lbx@fromlang, with a foreword, by}%
+                      {trans\adddot\ \lbx@fromlang, with a forew., by}},
+  bytranslatoraf   = {{translated \lbx@fromlang, with an afterword, by}%
+                      {trans\adddot\ \lbx@fromlang, with an afterw., by}},
+  bytranslatorcoin = {{translated \lbx@fromlang\ and commented, with an introduction, by}%
+                      {trans\adddot\ \lbx@fromlang\ and comm., with an introd., by}},
+  bytranslatorcofo = {{translated \lbx@fromlang\ and commented, with a foreword, by}%
+                      {trans\adddot\ \lbx@fromlang\ and comm., with a forew., by}},
+  bytranslatorcoaf = {{translated \lbx@fromlang\ and commented, with an afterword, by}%
+                      {trans\adddot\ \lbx@fromlang\ and comm., with an afterw., by}},
+  bytranslatoranin = {{translated \lbx@fromlang\ and annotated, with an introduction, by}%
+                      {trans\adddot\ \lbx@fromlang\ and annot., with an introd., by}},
+  bytranslatoranfo = {{translated \lbx@fromlang\ and annotated, with a foreword, by}%
+                      {trans\adddot\ \lbx@fromlang\ and annot., with a forew., by}},
+  bytranslatoranaf = {{translated \lbx@fromlang\ and annotated, with an afterword, by}%
+                      {trans\adddot\ \lbx@fromlang\ and annot., with an afterw., by}},
+  and              = {{and}{and}},
+  andothers        = {{et\addabbrvspace al\adddot}{et\addabbrvspace al\adddot}},
+  andmore          = {{et\addabbrvspace al\adddot}{et\addabbrvspace al\adddot}},
+  volume           = {{volume}{vol\adddot}},
+  volumes          = {{volumes}{vols\adddot}},
+  jourvol          = {{volume}{vol\adddot}},
+  jourser          = {{series}{ser\adddot}},
+  newseries        = {{new series}{new ser\adddot}},
+  oldseries        = {{old series}{old ser\adddot}},
+  edition          = {{edition}{ed\adddot}},
+  reprint          = {{reprint}{repr\adddot}},
+  reprintof        = {{reprint of}{repr\adddotspace of}},
+  reprintas        = {{reprinted as}{rpt\adddotspace as}},
+  page             = {{page}{p\adddot}},
+  pages            = {{pages}{pp\adddot}},
+  column           = {{column}{col\adddot}},
+  columns          = {{columns}{cols\adddot}},
+  line             = {{line}{l\adddot}},
+  lines            = {{lines}{ll\adddot}},
+  verse            = {{verse}{v\adddot}},
+  verses           = {{verses}{vv\adddot}},
+  section          = {{section}{\S}},
+  sections         = {{sections}{\S\S}},
+  paragraph        = {{paragraph}{par\adddot}},
+  paragraphs       = {{paragraphs}{par\adddot}},
+  in               = {{in}{in}},
+  inseries         = {{in}{in}},
+  ofseries         = {{of}{of}},
+  number           = {{number}{no\adddot}},
+  chapter          = {{chapter}{chap\adddot}},
+  mathesis         = {{Master's thesis}{MA\addabbrvspace thesis}},
+  phdthesis        = {{PhD\addabbrvspace thesis}{PhD\addabbrvspace thesis}},
+  resreport        = {{research report}{research rep\adddot}},
+  techreport       = {{technical report}{tech\adddotspace rep\adddot}},
+  software         = {{computer software}{comp\adddotspace software}},
+  datacd           = {{CD-ROM}{CD-ROM}},
+  audiocd          = {{audio CD}{audio CD}},
+  version          = {{version}{version}},
+  url              = {{address}{address}},
+  urlseen          = {{visited on}{visited on}},
+  citedas          = {{henceforth cited as}{henceforth cited as}},
+  thiscite         = {{this citation}{this cit\adddot}},% FIXME: unsure
+  seenote          = {{see note}{see n\adddot}},
+  quotedin         = {{quoted in}{qtd\adddotspace in}},
+  idem             = {{idem}{id\adddot}},
+  idemsf           = {{idem}{id\adddot}},
+  idemsm           = {{idem}{id\adddot}},
+  idemsn           = {{idem}{id\adddot}},
+  idempf           = {{idem}{id\adddot}},
+  idempm           = {{idem}{id\adddot}},
+  idempn           = {{idem}{id\adddot}},
+  idempp           = {{idem}{id\adddot}},
+  ibidem           = {{ibidem}{ibid\adddot}},
+  opcit            = {{op\adddotspace cit\adddot}{op\adddotspace cit\adddot}},
+  loccit           = {{loc\adddotspace cit\adddot}{loc\adddotspace cit\adddot}},
+  confer           = {{cf\adddot}{cf\adddot}},
+  sequens          = {{sq\adddot}{sq\adddot}},
+  sequentes        = {{sqq\adddot}{sqq\adddot}},
+  passim           = {{passim}{pass\adddot}},
+  see              = {{see}{see}},
+  seealso          = {{see also}{see also}},
+  january          = {{January}{Jan\adddot}},
+  february         = {{February}{Feb\adddot}},
+  march            = {{March}{Mar\adddot}},
+  april            = {{April}{Apr\adddot}},
+  may              = {{May}{May}},
+  june             = {{June}{June}},
+  july             = {{July}{July}},
+  august           = {{August}{Aug\adddot}},
+  september        = {{September}{Sept\adddot}},
+  october          = {{October}{Oct\adddot}},
+  november         = {{November}{Nov\adddot}},
+  december         = {{December}{Dec\adddot}},
+  langamerican     = {{American}{American}},
+  langbrazilian    = {{Brazilian}{Brazilian}},
+  langdanish       = {{Danish}{Danish}},
+  langdutch        = {{Dutch}{Dutch}},
+  langenglish      = {{English}{English}},
+  langfrench       = {{French}{French}},
+  langgerman       = {{German}{German}},
+  langgreek        = {{Greek}{Greek}},
+  langitalian      = {{Italian}{Italian}},
+  langlatin        = {{Latin}{Latin}},
+  langnorwegian    = {{Norwegian}{Norwegian}},
+  langportuguese   = {{Portuguese}{Portuguese}},
+  langspanish      = {{Spanish}{Spanish}},
+  langswedish      = {{Swedish}{Swedish}},
+  fromamerican     = {{from the American}{from the American}},
+  frombrazilian    = {{from the Brazilian}{from the Brazilian}},
+  fromdanish       = {{from the Danish}{from the Danish}},
+  fromdutch        = {{from the Dutch}{from the Dutch}},
+  fromenglish      = {{from the English}{from the English}},
+  fromfrench       = {{from the French}{from the French}},
+  fromgerman       = {{from the German}{from the German}},
+  fromgreek        = {{from the Greek}{from the Greek}},
+  fromitalian      = {{from the Italian}{from the Italian}},
+  fromlatin        = {{from the Latin}{from the Latin}},
+  fromnorwegian    = {{from the Norwegian}{from the Norwegian}},
+  fromportuguese   = {{from the Portuguese}{from the Portuguese}},
+  fromspanish      = {{from the Spanish}{from the Spanish}},
+  fromswedish      = {{from the Swedish}{from the Swedish}},
+  countryde        = {{Germany}{DE}},
+  countryeu        = {{European Union}{EU}},
+  countryep        = {{European Union}{EP}},
+  countryfr        = {{France}{FR}},
+  countryuk        = {{United Kingdom}{GB}},
+  countryus        = {{United States of America}{US}},
+  patent           = {{patent}{pat\adddot}},
+  patentde         = {{German patent}{German pat\adddot}},
+  patenteu         = {{European patent}{European pat\adddot}},
+  patentfr         = {{French patent}{French pat\adddot}},
+  patentuk         = {{British patent}{British pat\adddot}},
+  patentus         = {{U.S\adddotspace patent}{U.S\adddotspace pat\adddot}},
+  patreq           = {{patent request}{pat\adddot\ req\adddot}},
+  patreqde         = {{German patent request}{German pat\adddot\ req\adddot}},
+  patreqeu         = {{European patent request}{European pat\adddot\ req\adddot}},
+  patreqfr         = {{French patent request}{French pat\adddot\ req\adddot}},
+  patrequk         = {{British patent request}{British pat\adddot\ req\adddot}},
+  patrequs         = {{U.S\adddotspace patent request}{U.S\adddotspace pat\adddot\ req\adddot}},
+  file             = {{file}{file}},
+  library          = {{library}{library}},
+  abstract         = {{abstract}{abstract}},
+  annotation       = {{annotations}{annotations}},
+}
+
+\endinput
