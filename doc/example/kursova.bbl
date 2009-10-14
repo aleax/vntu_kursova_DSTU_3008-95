@@ -1,0 +1,135 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 0.8i $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{companion}{book}{}
+  \name{author}{3}{%
+    {{Goossens}{G.}%
+     {Michel}{M.}%
+     {}{}%
+     {}{}}%
+    {{Mittelbach}{M.}%
+     {Frank}{F.}%
+     {}{}%
+     {}{}}%
+    {{Samarin}{S.}%
+     {Alexander}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Addison-Wesley}%
+  }
+  \list{location}{1}{%
+    {Reading, Mass.}%
+  }
+  \strng{namehash}{GMMFSA1}
+  \strng{fullhash}{GMMFSA1}
+  \field{sortinit}{G}
+  \field{title}{The LaTeX Companion}
+  \field{year}{1994}
+\endentry
+
+\entry{fstbook}{book}{}
+  \name{author}{1}{%
+    {{ЫыіїЇ}{�.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {ВНТУыі}%
+  }
+  \strng{namehash}{�1}
+  \strng{fullhash}{�1}
+  \field{sortinit}{�}
+  \field{title}{іІыЪъї}
+  \field{year}{2009}
+\endentry
+
+\entry{2book}{book}{}
+  \name{author}{1}{%
+    {{Author2}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {M}%
+  }
+  \strng{namehash}{A1}
+  \strng{fullhash}{A1}
+  \field{sortinit}{A}
+  \field{title}{All about TeX}
+  \field{year}{1993}
+\endentry
+
+\entry{4book}{book}{}
+  \name{author}{1}{%
+    {{Author3}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Asfaf}%
+  }
+  \strng{namehash}{A2}
+  \strng{fullhash}{A2}
+  \field{sortinit}{A}
+  \field{title}{sfsfg}
+  \field{year}{1990}
+\endentry
+
+\entry{5book}{book}{}
+  \name{author}{1}{%
+    {{Author4}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {DSfsgsa}%
+  }
+  \strng{namehash}{A3}
+  \strng{fullhash}{A3}
+  \field{sortinit}{A}
+  \field{title}{Agadgad}
+  \field{year}{1990}
+\endentry
+
+\entry{6book}{book}{}
+  \name{author}{1}{%
+    {{Author5}{A.}%
+     {}{}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {M}%
+  }
+  \strng{namehash}{A4}
+  \strng{fullhash}{A4}
+  \field{sortinit}{A}
+  \field{title}{Veri long book title, realy verey very long}
+  \field{year}{1990}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
