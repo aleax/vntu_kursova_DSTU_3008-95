@@ -1,7 +1,7 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.14)  14 OCT 2009 23:16
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2009.10.24)  24 OCT 2009 15:19
 entering extended mode
  %&-line parsing enabled.
-**kursova
+**kursova.tex
 (./kursova.tex
 LaTeX2e <2005/12/01>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
@@ -1139,16 +1139,9 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 ))
 Package biblatex Info: Trying to load language 'ukrainian'...
-Package biblatex Info: ... file 'ukrainian.lbx' not found.
-
-
-Package biblatex Warning: Language 'ukrainian' not supported.
-(biblatex)                Using fallback language 'english' on input line 16.
-
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
-(/usr/share/texmf-site/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2009/07/04 v0.8e biblatex localization
+Package biblatex Info: ... file 'ukrainian.lbx' found.
+ (./ukrainian.lbx
+File: ukrainian.lbx 2009/07/04 v0.8e biblatex localization
 )
 
 Package biblatex Warning: 'babel' detected but 'csquotes' missing.
@@ -1162,7 +1155,7 @@ LaTeX Warning: Label `img:img_example' multiply defined.
 
 LaTeX Warning: Label `eq:delta' multiply defined.
 
-) (./appendix_a.aux) (./appendix_b.aux))
+) (./appendix.aux) (./appendix_b.aux))
 \openout1 = `kursova.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -1322,7 +1315,7 @@ Package Fancyhdr Warning: \headheight is too small (14.0pt):
 
 
 ]
-<images/example.pdf, id=94, 159.72835pt x 142.5212pt>
+<images/example.pdf, id=93, 159.72835pt x 142.5212pt>
 File: images/example.pdf Graphic file (type pdf)
  <use images/example.pdf>
 [5 <./images/example.pdf>]) [6]
@@ -1337,13 +1330,13 @@ File: images/example.pdf Graphic file (type pdf)
 [8]) [9] [10
 
 ]
-\openout2 = `appendix_a.aux'.
+\openout2 = `appendix.aux'.
 
- (./appendix_a.texpdfTeX warning (ext4): destination with the same identifier (
-name{section.1}) has been already used, duplicate ignored
+ (./appendix.texpdfTeX warning (ext4): destination with the same identifier (na
+me{section.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1 ...�хнічне завдання}{\mandatory}
+l.1 ...�користані інструменти}
                                                   
 File: images/example.pdf Graphic file (type pdf)
  <use images/example.pdf>)
@@ -1352,12 +1345,7 @@ File: images/example.pdf Graphic file (type pdf)
 ]
 \openout2 = `appendix_b.aux'.
 
- (./appendix_b.texpdfTeX warning (ext4): destination with the same identifier (
-name{section.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 ...�нтів сторінки}{\informational}
-                                                  )
+ (./appendix_b.tex)
 One-sided document style.
 LaTeX Font Info:    Try loading font information for T2A+fer on input line 38.
 (/usr/share/texmf/tex/latex/pscyr/t2afer.fd
@@ -1370,7 +1358,7 @@ textwidth = 483pt
 [12
 
 
-] (./kursova.aux (./vstup.aux) (./ch1.aux) (./ch2.aux) (./appendix_a.aux)
+] (./kursova.aux (./vstup.aux) (./ch1.aux) (./ch2.aux) (./appendix.aux)
 (./appendix_b.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1380,13 +1368,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 18178 strings out of 494806
- 287336 string characters out of 1178714
- 440847 words of memory out of 3000000
- 20817 multiletter control sequences out of 10000+50000
+ 18169 strings out of 494806
+ 287102 string characters out of 1178714
+ 440925 words of memory out of 3000000
+ 20813 multiletter control sequences out of 10000+50000
  35950 words of font info for 78 fonts, out of 3000000 for 5000
  220 hyphenation exceptions out of 8191
- 47i,11n,51p,789b,891s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 47i,11n,51p,793b,891s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/pscyr/t2a.enc}{/usr/share/texmf-dist/fonts/
 enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1/public/pscyr/antiq5.pfb></u
 sr/share/texmf/fonts/type1/public/pscyr/antiq6.pfb></usr/share/texmf-dist/fonts
@@ -1396,9 +1384,9 @@ ist/fonts/type1/bluesky/latex-fonts/lcircle1.pfb></usr/share/texmf-dist/fonts/t
 ype1/bluesky/latex-fonts/line10.pfb></usr/share/texmf/fonts/type1/public/pscyr/
 times.pfb></usr/share/texmf/fonts/type1/public/pscyr/timesbd.pfb></usr/share/te
 xmf/fonts/type1/public/pscyr/timesi.pfb>
-Output written on kursova.pdf (12 pages, 114803 bytes).
+Output written on kursova.pdf (12 pages, 114428 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
- 111 named destinations out of 1000 (max. 131072)
+ 281 PDF objects out of 1000 (max. 8388607)
+ 109 named destinations out of 1000 (max. 131072)
  106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

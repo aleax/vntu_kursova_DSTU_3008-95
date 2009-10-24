@@ -1,4 +1,4 @@
-\documentclass[14pt]{extarticle}
+\documentclass[14pt]{extreport}
 %Мой стилевой файл. делался с учётом:
 %      Методичні вказівки до оформлення курсових проектів (робіт)
 %у Вінницькому національному технічному університеті
@@ -23,16 +23,17 @@
 
 % Основна частина
 \newpage
+\include{vstup}
 \include{ch1}
 \include{ch2}
 
 % Библиография
 \newpage
-\printbibliography
+\printbibliography[heading=bibintoc]
 
 % Додатки
 \appendix
-
-\include{appendix_a}
+\include{appendix}
+%\include{appendix_a}
 \include{appendix_b}
 \end{document}

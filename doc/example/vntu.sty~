@@ -115,8 +115,11 @@
 %\RequirePackage[numbers,sort&compress]{natbib}
 %natbib=false
 
-\RequirePackage[sorting=none,
-hyperref=auto]{biblatex}
+\RequirePackage[
+  sorting=none,
+  hyperref=auto,
+  %heading=bibintoc
+  ]{biblatex}
 
 %\bibliographystyle{unsrt,gost780u}
 %\bibliographystyle{unsrt}
@@ -166,7 +169,7 @@ hyperref=auto]{biblatex}
 % Добавление в оглалвелние ненумерованых разделов
 %\section*{Введение}
 %\addcontentsline{toc}{section}{\tocsecindent{Введение}}
-\newcommand{\tocsecindent}{\hspace{0mm}}
+%\newcommand{\tocsecindent}{\hspace{0mm}}
 
 
 % Рисунки и таблицы
@@ -182,15 +185,32 @@ hyperref=auto]{biblatex}
 \renewcommand\appendix{\par
   \setcounter{section}{0}%
   \setcounter{subsection}{0}%
-  \gdef\thesection{\@Asbuk\c@section
-}
+  \setcounter{subsubsection}{0}%
+  %\renewcommand\thesection{\appendixname~\@Asbuk\c@section}
+  \gdef\thesection{\@Asbuk\c@section}
 
+%в тексте
 \renewcommand\section{\@startsection {section}{1}{\parindent}%
                                    {5.5ex \@plus -1ex \@minus -.2ex}%
                                    {2.3ex\@plus.2ex}%
-		 					  {\normalfont\normalsize\centering}}
+	 				{\normalfont\normalsize\centering}}
 
 }
+
+\def\@schapter#1{\if@twocolumn
+                   \@topnewpage[\@makeschapterhead{#1}]%
+                 \else
+                   \@makeschapterhead{#1}%
+                   \@afterheading
+                 \fi}
+\def\@makeschapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
 
 \newcommand{\mandatory}{обов'язковий}
 \newcommand{\informational}{довідковий}

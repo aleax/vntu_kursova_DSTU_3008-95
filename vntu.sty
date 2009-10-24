@@ -115,8 +115,11 @@
 %\RequirePackage[numbers,sort&compress]{natbib}
 %natbib=false
 
-\RequirePackage[sorting=none,
-hyperref=auto]{biblatex}
+\RequirePackage[
+  sorting=none,
+  hyperref=auto,
+  %heading=bibintoc
+  ]{biblatex}
 
 %\bibliographystyle{unsrt,gost780u}
 %\bibliographystyle{unsrt}
@@ -182,13 +185,15 @@ hyperref=auto]{biblatex}
 \renewcommand\appendix{\par
   \setcounter{section}{0}%
   \setcounter{subsection}{0}%
-  \gdef\thesection{\@Asbuk\c@section
-}
+  \setcounter{subsubsection}{0}%
+  %\renewcommand\thesection{\appendixname~\@Asbuk\c@section}
+  \gdef\thesection{\@Asbuk\c@section}
 
+%в тексте
 \renewcommand\section{\@startsection {section}{1}{\parindent}%
                                    {5.5ex \@plus -1ex \@minus -.2ex}%
                                    {2.3ex\@plus.2ex}%
-		 					  {\normalfont\normalsize\centering}}
+	 				{\normalfont\normalsize\centering}}
 
 }
 
