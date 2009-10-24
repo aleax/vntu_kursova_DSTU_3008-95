@@ -1,0 +1,12 @@
+# ignore objects and archives, anywhere in the tree.
+*.[oa]
+# ignore tmp files
+*~
+
+*.aux
+*.out
+*.log
+*.toc
+*.backup
+*.bbl
+*.blg
