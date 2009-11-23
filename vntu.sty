@@ -12,7 +12,7 @@
 %установка геометрии листа
 \RequirePackage{geometry}
 \geometry{a4paper,
-  left=20mm, right=20mm, top=20mm, bottom=20mm,
+  left=20mm, right=10mm, top=20mm, bottom=20mm,
   nofoot, nomarginpar
 }
 
@@ -32,6 +32,7 @@
 % 0pt — отключает горизонтальную линию над/под колонтитулами
 \renewcommand{\footrulewidth}{0pt}
 \renewcommand{\headrulewidth}{0pt}
+
 
 
 %``умное'' расстояние между строк
@@ -180,6 +181,15 @@
 % названия объектов
 \addto\captionsukrainian{\renewcommand\figurename{Рисунок}}
 \addto\captionsukrainian{\renewcommand\tablename{Таблиця}}
+
+% Пояснения
+% \begin{description}
+%  \item E --- енергія;
+%  \item m --- маса;
+%  \item c --- швидкість світла
+% \end{description}
+%\RequirePackage{desclist}
+
 
 %TODO: Додатки
 \renewcommand\appendix{\par
