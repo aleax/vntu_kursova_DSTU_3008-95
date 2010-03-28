@@ -1,9 +1,17 @@
+\RequirePackage{cmap} %копипастельный pdf
 %Нормальные киррилические шрифты
 \RequirePackage[math]{pscyr}
-\renewcommand{\rmdefault}{ftm} %установка гарнитуры Times для шрифтов с засечками
+%установка гарнитуры Times для шрифтов сзасечками
+\renewcommand{\rmdefault}{ftm}
+
+%cm-super вместо pscyr
+%\RequirePackage[T1]{fontenc}
+
 % Пакети перекодування
 \RequirePackage[T2A]{fontenc}
 \RequirePackage[utf8]{inputenc}
+
+
 \RequirePackage[ukrainian]{babel}
 %\RequirePackage[russian,ukrainian]{babelbib} %must be installed
 
@@ -16,7 +24,7 @@
   nofoot, nomarginpar
 }
 
-\RequirePackage[verbose]{layout}
+%\RequirePackage[verbose]{layout}
 %\geometry{showframe}
 
 %DONE Нумерация слева вверху
@@ -66,7 +74,7 @@
 \RequirePackage{ifpdf}
 \ifpdf %if using pdfLaTeX in PDF mode
   \RequirePackage[pdftex]{graphicx}
-  \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg,.mps}
+  \DeclareGraphicsExtensions{.pdf,.png,.jpg,.jpeg,.mps,.eps}
   \RequirePackage{pgf}
   \RequirePackage{tikz}
 \else %if using LaTeX or pdfLaTeX in DVI mode
@@ -109,6 +117,9 @@
 %TODO Стиль библиографии
 \addto\captionsukrainian{\renewcommand\refname{\MakeUppercase{Перелік посилань}}}
 
+\renewcommand{\@biblabel}[1]{#1.}
+
+%************* biblatex
 %Настройка библиографии
 %[1] -> 1. in the bibliography
 %\renewcommand\@biblabel[1]{#1.}
@@ -116,12 +127,15 @@
 %\RequirePackage[numbers,sort&compress]{natbib}
 %natbib=false
 
-\RequirePackage[
-  sorting=none,
-  hyperref=auto,
-  %heading=bibintoc
-  ]{biblatex}
+%  \RequirePackage[
+% %   sorting=none,
+%    %hyperref=auto,
+%    %bibencoding=utf8,
+%    %backend=bibtex8
+%    %heading=bibintoc
+%    ]{biblatex}
 
+%************ bibtex
 %\bibliographystyle{unsrt,gost780u}
 %\bibliographystyle{unsrt}
 %\bibliographystyle{gost780u}
@@ -132,18 +146,18 @@
 %Вид разделов в теле документа
 \renewcommand\section{\@startsection {section}{1}{\parindent}%
                                    {5.5ex \@plus -1ex \@minus -.2ex}%
-                                   {2.3ex \@plus.2ex}%
-						{\normalfont\bfseries\centering\protect\MakeUppercase}}
+                                   {5.3ex \@plus.2ex}%
+						{\normalfont\protect\centering\MakeUppercase}}
                                    %{\normalfont}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\parindent}%
                                      {5.25ex\@plus -1ex \@minus -.2ex}%
-                                     {1.5ex \@plus .2ex}%
-                                     {\normalfont\bfseries}}
+                                     {4.5ex \@plus .2ex}%
+                                     {\normalfont}}
                                      %{\normalfont}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\parindent}%
                                      {5.25ex\@plus -1ex \@minus -.2ex}%
-                                     {1.5ex \@plus .2ex}%
-                                     {\normalfont\normalsize\bfseries}}
+                                     {4.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize}}
                                      %{\normalfont}}
 
 % Вид section,sub-,subsub- в содержании
@@ -215,5 +229,5 @@
 	\section*{\centering\appendixname~\thesection{}
 	\\(#2) %TODO Проверка на `пустость` параметра типа приложения
 	\\#1}
-	\addcontentsline{toc}{section}{\appendixname~\thesection{}.~#1}
+	\addcontentsline{toc}{section}{\appendixname~\thesection{}~#1}
 }
